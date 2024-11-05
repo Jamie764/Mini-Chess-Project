@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Chess Project</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <div id="Intro">
+            <h1 id="welcome">Welcome to Mini Chess</h1>
+            <h3 id="instruction-header">Instructions:</h3>
+            <p id="instructions">- To play, click on a piece to select it and then click on a highlighted space to either move there or take an enemy piece. <br><br>
+                - Press escape or backspace to cancel a move. <br><br>
+                - You can only move white/black pieces when it is white's/black's turn. <br><br>
+                - For the sake of simplicity, no special movements are allowed. (so no castling, pawns cannot move 2 spaces the first time they are moved, etc)<br><br>
+                - Furthermore, to end the game the enemy king must be captured rather than checkmated.
+            </p>
+            <div id="turn_container">
+                <h2 class="turn_prompt" id="white_turn">White's Turn</h2>
+                <h2 class="turn_prompt hidden" id="black_turn">Black's Turn</h2>
+            </div>
+        </div>
+
+
+        <div id="Board">
+            <div class="row" id="row_1">
+                
+            </div>
+            <div class="row" id="row_2">
+                
+            </div>
+            <div class="row" id="row_3">
+                
+            </div>
+            <div class="row" id="row_4">
+                
+            </div>
+            <div class="row" id="row_5">
+                
+            </div>
+        </div>
+    </body>
+</html>
+<script src="script.js"></script>

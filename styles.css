@@ -1,0 +1,105 @@
+:root{
+    --cell_dimension: min(7vh, 16vw);
+    --cell_border: 2px;
+    --board_border: 4px;
+    --board_dimension: calc(5*var(--cell_dimension) + 10*var(--cell_border));
+    /*--base_font_size: min(30px,6vh);*/
+    --base_font_size: 5.5vh;
+    --cell_color: rgb(230,255,200);
+    --hover_color: green;
+    --move_color: aqua;
+    --attack_color: red;
+}
+
+
+#Board{
+    /*Positions the board in the center of the screen*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(0%);
+
+    width: var(--board_dimension);
+    height: var(--board_dimension);
+    display: flex;
+    flex-direction: column;
+    border: var(--board_border) solid black;
+}
+
+.row{
+    display:flex;
+    flex-direction: row;
+}
+
+.cell{
+    width: var(--cell_dimension);
+    height: var(--cell_dimension);
+    background-color: var(--cell_color);
+    border: var(--cell_border) solid black;
+    text-align: center;
+}
+
+
+#Intro{
+    text-align: center;
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    height: 50vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1%;
+}
+
+#welcome{
+    height: 20%;
+    margin: 0;
+}
+#instruction-header{
+    height: 10%;
+    margin: 0;
+    text-decoration: underline;
+}
+#instructions{
+    height: 45%;
+    margin: 0;
+    overflow-y: auto;
+}
+
+#turn_container{
+    height: 20%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.turn_prompt{
+    text-decoration: underline;
+}
+
+.hidden{
+    display: none;
+}
+
+h1{
+    font-size: var(--base_font_size);
+}
+h2{
+    font-size: calc(var(--base_font_size) / 1.2);
+}
+h3{
+    font-size: calc(var(--base_font_size) / 1.4);
+}
+p{
+    font-size: calc(var(--base_font_size) / 1.8);
+}
+
+i{
+    position: relative;
+    font-size: calc(var(--cell_dimension)*0.8);
+    top: calc(var(--cell_dimension)*0.1);
+}
